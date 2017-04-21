@@ -10,8 +10,59 @@
   </head>
   <body>
     <div class="jumbotron">
-      <h1></h1>
+      <h1>Doctors</h1>
     </div>
-    <button id="getDoctors" type="button" name="button">here</button>
+    <div class="row">
+      <div class="col-md-2">
+        <h4> Doctor Search Options</h4>
+        <ul>
+          <li id="nameSearch">Name</li>
+          <li id="specialtySearch">Specialty</li>
+          <li id="practiceSearch">Practice</li>
+          <li id="locationSearch">Location</li>
+        </ul>
+      </div>
+      <div class="col-md-6" class="searchForm">
+        <form id="searchForm" class="form-group row">
+          <label class="nameForm" class="col-2 col-form-label">Doctors Name:</label>
+          <div class="col-10">
+           <input class="form-control nameForm" type="text" id="nameInput">
+          </div>
+          <label class="specialtyForm"  class="col-2 col-form-label">Specialty:</label>
+          <div class="col-10">
+            <input class="form-control specialtyForm" type="text"  id="specialtyInput">
+          </div>
+          <label class="practiceForm"  class="col-2 col-form-label">Practice:</label>
+          <div class="col-10">
+            <input class="form-control practiceForm" type="text"  id="practiceInput">
+          </div>
+          <label class="locationForm"  class="col-2 col-form-label">Location:</label>
+          <div class="col-10">
+            <input class="form-control locationForm" type="text"  id="locationInput">
+          </div>
+          <br>
+          <label class="sortOption"  class="col-2 col-form-label">Sort By:</label>
+          <div class="col-10">
+           <select class="sortOption" name="sort" id="sortOption">
+              <option selected="" value=""></option>
+              <option value="full-name-asc"> full-name-asc  </option>
+              <option value="full-name-desc"> full-name-desc  </option>
+              <option value="last-name-asc"> last-name-asc  </option>
+              <option value="last-name-desc"> last-name-desc  </option>
+              <option value="first-name-asc"> first-name-asc  </option>
+              <option value="first-name-desc"> first-name-desc  </option>
+              <option value="best-match-asc"> best-match-asc  </option>
+              <option value="best-match-desc"> best-match-desc  </option>
+              <option value="rating-asc"> rating-asc  </option>
+              <option value="rating-desc"> rating-desc  </option>
+              <option value="distance-asc"> distance-asc  </option>
+              <option value="distance-desc"> distance-desc  </option>
+            </select>
+          </div>
+          <br>
+          <button id="searchSubmit" type="button" name="button">Search</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
