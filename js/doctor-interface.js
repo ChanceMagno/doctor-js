@@ -1,5 +1,12 @@
 var Doctor = require('./../js/doctor.js').doctorModule;
 
+//show data from search
+// var displayDoctors = function(doctorList) {
+//   doctorList.forEach(function(doctor){
+//     $('.searchResults').append(doctor.data[1].profile.bio);
+//   })
+// }
+
 $(document).ready(function() {
   currentDoctor = new Doctor();
 //Reactive form
@@ -35,21 +42,11 @@ $(document).ready(function() {
     var practice = $("form #practiceInput").val();
     var location = $("form #locationInput").val();
     var sortBy = $("form #sortOption").val();
-  //   if ($('form #nameInput').is(":visible")) {
-  //     currentDoctor.searchName(name);
-  //   } else if ($('form #specialtyInput').is(":visible")) {
-  //       currentDoctor.searchLocation(location);
-  //   } else if ($("form #specialtyInput").is(":visible")) {
-  //       currentDoctor.searchSpecialty(specialty);
-  //   } else if ()
-  // }
-    // var name = $("form #nameInput").val();
-    // var specialty = $("form #specialtyInput").val();
-    // var practice = $("form #practiceInput").val();
-    // var location = $("form #locationInput").val();
-    // var sortBy = $("form #sortOption").val();
-    //
     currentDoctor.getDoctors(name, specialty, practice, location, sortBy);
 });
 //end Search Submit
+
+
+
+
 });
