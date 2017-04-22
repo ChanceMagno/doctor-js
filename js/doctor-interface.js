@@ -1,9 +1,15 @@
 var Doctor = require('./../js/doctor.js').doctorModule;
 
-//show data from search
+var name;
+var specialty;
+var practiceForm;
+var location;
+var sortBy;
+
+// show data from search
 // var displayDoctors = function(doctorList) {
 //   doctorList.forEach(function(doctor){
-//     $('.searchResults').append(doctor.data[1].profile.bio);
+//     $('.searchResults').append("<p>" + doctor.data.profile.bio + "</p>");
 //   })
 // }
 
@@ -45,6 +51,13 @@ $(document).ready(function() {
     currentDoctor.getDoctors(name, specialty, practice, location, sortBy);
 });
 //end Search Submit
+
+$(window).scroll(function() {
+  if($(window).scrollTop() == $(document).height() - $(window).height()) {
+         currentDoctor.next();
+         currentDoctor.getDoctors(name, specialty, practice, location, sortBy);
+  }
+});
 
 
 

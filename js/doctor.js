@@ -7,6 +7,13 @@ var apiSortBy;
 var skipNumber = 0;
 
 function Doctor() {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.bio = bio;
+  this.image = image;
+  this.specialization = specialization;
+  this.category = category;
+
 }
 
 Doctor.prototype.showMore = function() {
@@ -36,7 +43,7 @@ Doctor.prototype.getDoctors = function(name, specialty, practice, location, sort
   } else { apiSortBy = ("&sort=" + sortBy);
     }
     $.get('https://api.betterdoctor.com/2016-03-01/doctors?'+ apiName + apiSpecialty + apiPractice + apiLocation + '&user_location=37.773%2C-122.413' + apiSortBy + '&skip='+ skipNumber + '&limit=10&user_key=' + apiKey).then(function(result) {
-      // displayDoctors(result.data);
+
             console.log(result);
             console.log(result.data[0].profile.bio);
       })
