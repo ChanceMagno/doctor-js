@@ -2,16 +2,9 @@ var Doctor = require('./../js/doctor.js').doctorModule;
 
 var name;
 var specialty;
-var practiceForm;
+var practice;
 var location;
 var sortBy;
-
-// show data from search
-// var displayDoctors = function(searchResults) {
-//   searchResults.forEach(function(result){
-//     $('.searchResults').append("<p>" + result.firstName + "</p>");
-//   })
-// }
 
 $(document).ready(function() {
   currentDoctor = new Doctor();
@@ -48,20 +41,23 @@ $(document).ready(function() {
     var practice = $("form #practiceInput").val();
     var location = $("form #locationInput").val();
     var sortBy = $("form #sortOption").val();
-    currentDoctor.getDoctors(name, specialty, practice, location, sortBy);
+    $(".searchResults").empty();
+    currentDoctor.getDoctors(name, specialty, practice, location, sortBy, displayDoctors);
 
 });
 //end Search Submit
 
-//loads more if user scrolls down
-$(window).scroll(function() {
-  if($(window).scrollTop() == $(document).height() - $(window).height()) {
-         currentDoctor.next();
-         currentDoctor.getDoctors(name, specialty, practice, location, sortBy, displayDoctors);
+// show data from search
+
+var displayDoctors = function(searchResults) {
+  if (searchResults.length === 0) {
+    $(".searchResults").append("<p>Sorry, no doctors were found with your given search criteria </p>");
+  } else {
+    searchResults.forEach(function(result) {
+      $('.searchResults').append("<div class='panel-group'><div class='panel panel-primary'><div class='panel-heading'>" + result.firstName + " " + result.lastName + "</div><div class='panel-body'>" +  "<img src='" + result.image + "'>" + result.bio + "</div></div></div>");
+    });
   }
-});
-
-
+};
 
 
 });
