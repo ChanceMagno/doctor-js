@@ -7,9 +7,9 @@ var location;
 var sortBy;
 
 // show data from search
-// var displayDoctors = function(doctorList) {
-//   doctorList.forEach(function(doctor){
-//     $('.searchResults').append("<p>" + doctor.data.profile.bio + "</p>");
+// var displayDoctors = function(searchResults) {
+//   searchResults.forEach(function(result){
+//     $('.searchResults').append("<p>" + result.firstName + "</p>");
 //   })
 // }
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
   });
 //End Reactive form
 
-//Search Submit (determines which search method to call and if for is empty)
+//Search Submit
   $('#searchSubmit').click(function() {
     var name = $("form #nameInput").val();
     var specialty = $("form #specialtyInput").val();
@@ -49,13 +49,15 @@ $(document).ready(function() {
     var location = $("form #locationInput").val();
     var sortBy = $("form #sortOption").val();
     currentDoctor.getDoctors(name, specialty, practice, location, sortBy);
+
 });
 //end Search Submit
 
+//loads more if user scrolls down
 $(window).scroll(function() {
   if($(window).scrollTop() == $(document).height() - $(window).height()) {
          currentDoctor.next();
-         currentDoctor.getDoctors(name, specialty, practice, location, sortBy);
+         currentDoctor.getDoctors(name, specialty, practice, location, sortBy, displayDoctors);
   }
 });
 
