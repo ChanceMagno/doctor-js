@@ -78,7 +78,7 @@ var displayDoctors = function(searchResults) {
     $(".searchResults").append("<p>Sorry, no doctors were found with your given search criteria </p>");
   } else {
     searchResults.forEach(function(result) {
-      $('.searchResults').append("<div class='panel-group'><div class='panel panel-primary'><div class='panel-heading'>" + result.firstName + " " + result.lastName + "</div><div class='panel-body'>" +  "<img src='" + result.image + "'>" + result.bio + "</div></div></div>");
+      $('.searchResults').append("<div class='panel-group'><div class='panel panel-primary'><div class='panel-heading'>" + result.firstName + " " + result.lastName + "</div><div class='panel-body'>" +  "<img class='bioImage'src='" + result.image + "'>" + result.bio + "</div></div></div>");
     });
   }
 };

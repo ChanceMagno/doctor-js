@@ -1,5 +1,6 @@
 .sortOption {
   display: none;
+  color: black;
 }
 
 .nameForm {
@@ -22,10 +23,30 @@
   display: none;
 }
 
+#nameSearch:hover {
+  font-size: 1.5em;
+}
+
+#practiceSearch:hover {
+  font-size: 1.5em;
+}
+
+#locationSearch:hover {
+  font-size: 1.5em;
+}
+
+#specialtySearch:hover {
+  font-size: 1.5em;
+}
+
 .panel img {
   float: left;
   margin-right: 3px;
   margin-bottom: 3px;
+}
+
+.panel-body:hover {
+  font-size: 125%;
 }
 
 .panel {
@@ -70,4 +91,8 @@ body {
 
 form {
   color: white;
+}
+
+h4 {
+  text-decoration: underline;
 }
