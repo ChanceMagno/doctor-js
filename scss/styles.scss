@@ -22,18 +22,31 @@
   display: none;
 }
 
-img {
+.panel img {
   float: left;
   margin-right: 3px;
   margin-bottom: 3px;
 }
 
-.panel .panel-heading {
+.panel {
 font-weight: bold;
-
+background-color: rgba(245, 245, 245, 0.4);
 }
 
 body {
   font-family: fantasy;
-  background-color: darkgray;
+  background-image: url('https://images8.alphacoders.com/354/354971.jpg');
+  background-attachment: scroll;
+}
+
+.jumbotron {
+  text-align: center;
+  background-image: url('https://ak2.picdn.net/shutterstock/videos/584155/thumb/1.jpg?i10c=img.resize(height:160)');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.searchOptions {
+  margin-left: 10px;
+  color: white;
 }

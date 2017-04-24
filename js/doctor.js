@@ -43,7 +43,6 @@ Doctor.prototype.getDoctors = function(name, specialty, practice, location, sort
           search.lastName = result.profile.last_name;
           search.image = result.profile.image_url;
           search.bio = result.profile.bio;
-          console.log(result.profile.bio);
           searchResults.push(search);
         });
           displayDoctors(searchResults);
