@@ -31,12 +31,15 @@
 .panel {
 font-weight: bold;
 background-color: rgba(245, 245, 245, 0.4);
+font-size: 20px;
+font-weight: 600;
 }
 
 body {
   font-family: fantasy;
   background-image: url('https://images8.alphacoders.com/354/354971.jpg');
   background-attachment: scroll;
+  font-weight: bolder;
 }
 
 .jumbotron {
@@ -44,9 +47,27 @@ body {
   background-image: url('https://ak2.picdn.net/shutterstock/videos/584155/thumb/1.jpg?i10c=img.resize(height:160)');
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px
 }
 
 .searchOptions {
   margin-left: 10px;
+  color: white;
+}
+
+.specialtyWarning {
+  display: none;
+  font-style: italic;
+  color: red;
+}
+
+
+ #searchSubmit {
+  background-color: blue;
+  color: white;
+}
+
+form {
   color: white;
 }

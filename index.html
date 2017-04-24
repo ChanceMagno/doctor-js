@@ -15,33 +15,45 @@
     </div>
     <div class="row">
       <div class="col-md-2 searchOptions">
-        <h4> Doctor Search Options</h4>
+        <h4>Search Options</h4>
         <ul>
           <li id="nameSearch">Name</li>
+          <br>
           <li id="specialtySearch">Specialty</li>
+          <br>
           <li id="practiceSearch">Practice</li>
+          <br>
           <li id="locationSearch">Location</li>
         </ul>
       </div>
       <div class="col-md-6" class="searchForm">
-        <form id="searchForm" class="form-group row">
+        <form class="form-group row">
           <label class="nameForm" class="col-2 col-form-label">Doctors Name:</label>
           <div class="col-10">
            <input class="form-control nameForm" type="text" id="nameInput">
           </div>
+        </form>
+        <form class="form-group row">
           <label class="specialtyForm"  class="col-2 col-form-label">Specialty:</label>
           <div class="col-10">
             <input class="form-control specialtyForm" type="text"  id="specialtyInput">
           </div>
+          <p class='specialtyWarning'>(specialty search requires a name Input)</p>
+        </form>
+        <form class="form-group row">
           <label class="practiceForm"  class="col-2 col-form-label">Practice:</label>
           <div class="col-10">
             <input class="form-control practiceForm" type="text"  id="practiceInput">
           </div>
+        </form>
+        <form class="form-group row">
           <label class="locationForm"  class="col-2 col-form-label">Location:</label>
           <div class="col-10">
             <input class="form-control locationForm" type="text"  id="locationInput">
           </div>
-          <br>
+        </form>
+
+        <form class="form-group row">
           <label class="sortOption"  class="col-2 col-form-label">Sort By:</label>
           <div class="col-10">
            <select class="sortOption" name="sort" id="sortOption">
@@ -61,10 +73,9 @@
             </select>
           </div>
           <br>
-          <button id="searchSubmit" type="button" name="button">Search</button>
+          <button class="panel-primary" id="searchSubmit" type="button" name="button">Search</button>
         </form>
         <div class="searchResults">
-
         </div>
       </div>
     </div>
