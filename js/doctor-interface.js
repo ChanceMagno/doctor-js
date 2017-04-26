@@ -22,7 +22,7 @@ currentDoctor = new Doctor();
   });
 
   $('#specialtySearch').click(function() {
-    $('#nameSearch, #practiceSearch, #locationSearch, #searchSubmit, .specialtyWarning').show("slow");
+    $('#nameSearch, #practiceSearch, #locationSearch, #searchSubmit, .specialtyWarning, .nameForm').show("slow");
     $('.locationForm, .practiceForm, nameForm, #specialtySearch').hide("fast");
     $('.nameForm .sortOption, .specialtyForm').slideDown("slow");
     $("#specialtySearch").bind("click", function() {

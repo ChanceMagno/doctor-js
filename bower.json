@@ -3,7 +3,7 @@
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/ChanceMagno/doctor-js",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,5 +15,8 @@
     "bootstrap": "^3.3.7",
     "moment": "^2.18.1",
     "jquery": "^3.2.1"
-  }
+  },
+  "authors": [
+    "Chance <ChanceMagno@gmail.com>"
+  ]
 }
