@@ -10,7 +10,7 @@ This page is to allow users to search through doctors by different search method
 
 | Behavior                   | Input Example     | Output Example    |
 |:---:|:---:|:---:|
-|user can search for docotor by name|user inputs "jim"|show doctor info|
+|user can search for doctor by name|user inputs "jim"|show doctor info|
 |user can search by location|user inputs "OR"|show doctors|
 |user can do multiple searches|new search name "mike"|clears last search and shows doctors matching "mike"|
 |automatically loads more doctors when user scrolls down|user scrolls to bottom of page|displays more doctors matching search|
